@@ -82,7 +82,7 @@
 		<tab heading="Markup">
 <pre ng-non-bindable><code class="language-markup">	&lt;div ng-controller="safeCtrl">
 
-		&lt;button type="button" ng-click="addRandomItem(row)" class="btn btn-sm btn-success">
+		&lt;button type="button" ng-click="addRandomItem()" class="btn btn-sm btn-success">
 			&lt;i class="glyphicon glyphicon-plus">
 			&lt;/i> Add random item
 		&lt;/button>
@@ -127,9 +127,9 @@
 
     function generateRandomItem(id) {
 
-        var firstname = firstnames[Math.floor(Math.random() * 3)];
-        var lastname = lastnames[Math.floor(Math.random() * 3)];
-        var birthdate = dates[Math.floor(Math.random() * 3)];
+        var firstname = firstnames[Math.floor(Math.random() * 4)];
+        var lastname = lastnames[Math.floor(Math.random() * 4)];
+        var birthdate = dates[Math.floor(Math.random() * 4)];
         var balance = Math.floor(Math.random() * 2000);
 
         return {
