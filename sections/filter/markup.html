@@ -158,9 +158,6 @@
     ];
 
     scope.displayCollection = [].concat(scope.rowCollection);
-
-    scope.predicates = ['firstName', 'lastName', 'birthDate', 'balance', 'email'];
-    scope.selectedPredicate = scope.predicates[0];
 ]);
 
 app.filter('myStrictFilter', function($filter){
@@ -204,7 +201,7 @@ app.filter('unique', function() {
                     <input st-search="strictSearchValue" placeholder="search for equal match" class="input-sm form-control" type="search"/>
                 </th>
                 <th>
-                    <select st-search="strictSelectValue">
+                    <select st-search="strictSelectValue" class="input-sm form-control">
                         <option value="">All</option>
                         <option ng-repeat="row in rowCollection | unique:'strictSelectValue'" value="{{row.strictSelectValue}}">{{row.strictSelectValue}}</option>
                     </select>
